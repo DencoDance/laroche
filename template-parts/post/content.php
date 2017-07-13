@@ -85,9 +85,9 @@
             echo '<hr>';
 		?>
         <div id="article-coments">
-            <p><?php comments_number('0', '1', '%'); ?> comments <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+            <p><?php comments_number('0', '1', '%'); ?> comments <i id="cicon" class="fa fa-caret-down" aria-hidden="true"></i></p>
         </div>
-        <img src="" alt="">
+        <div style="display: none" id="comments"><?php comments_template(); ?></div>
 	</div><!-- .entry-content -->
 
 	<?php if ( is_single() ) : ?>

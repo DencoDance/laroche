@@ -44,4 +44,28 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 </div><!-- .wrap -->
 
-<?php get_footer();
+<?php get_footer(); ?>
+<script>
+    $(function () {
+        $('#article-coments').click(function () {
+            var comments = $('#comments');
+            if (comments.is(':visible')) {
+                comments.hide(300);
+                $('#cicon').removeClass('fa-caret-up');
+                $('#cicon').addClass('fa-caret-down');
+            }
+            if (comments.is(':hidden')) {
+                comments.show(300);
+                $('#cicon').removeClass('fa-caret-down');
+                $('#cicon').addClass('fa-caret-up');
+            }
+        });
+        $(window).resize(function() {
+            if ($(window).width() <= '782'){
+                $('.site-content-contain').css('background-color', '#D7D7D7');
+            } else {
+                $('.site-content-contain').css('background-color', 'white');
+            }
+        });
+    });
+</script>

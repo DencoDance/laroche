@@ -4339,6 +4339,7 @@ object {
     width: 221px;
     border: 1px solid #DEDEDE;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 #article-coments p {
