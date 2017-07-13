@@ -20,22 +20,36 @@
 	?>
 	<header class="entry-header">
 		<?php
-			if ( 'post' === get_post_type() ) :
-				echo '<div class="entry-meta">';
-					if ( is_single() ) :
-						twentyseventeen_posted_on();
-					else :
-						echo twentyseventeen_time_link();
-						twentyseventeen_edit_link();
-					endif;
-				echo '</div><!-- .entry-meta -->';
-			endif;
+            echo '<p id="article-date">'.mb_strtoupper(get_the_date( 'M j' )).'</p>';
+//			if ( 'post' === get_post_type() ) :
+//				echo '<div class="entry-meta">';
+//					if ( is_single() ) :
+//						twentyseventeen_posted_on();
+//					else :
+//						echo twentyseventeen_time_link();
+//						twentyseventeen_edit_link();
+//					endif;
+//				echo '</div><!-- .entry-meta -->';
+//			endif;
 
 			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
+//			    print_r($post);
+//			    echo strtoupper($post->post_date);
+				the_title( '<h1 id="article-header" class="entry-title">', '</h1>' );
 			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 id="article-header" class="entry-title"> </h2>' );
 			}
+			$count = count(get_the_category());
+			$i = 1;
+            echo '<p id="article-category">';
+            foreach (get_the_category() as $k) {
+			    echo mb_strtoupper($k->name);
+			    if ($count != $i) {
+			        echo ' | ';
+                }
+                $i++;
+            }
+            echo '</p>';
 		?>
 	</header><!-- .entry-header -->
 
@@ -47,13 +61,10 @@
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
-	<div class="entry-content">
+	<div id="article-content" class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-				get_the_title()
-			) );
+            the_content();
 
 			wp_link_pages( array(
 				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
@@ -61,7 +72,22 @@
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
 			) );
+			echo '<hr>';
+			echo '<div id="article-user">';
+			echo '<img id="article-avatar" src="' . get_avatar_url($post) . '" alt="">';
+			echo '<div id="article-utext">';
+                echo '<p id="article-uname">';
+                    the_author();
+                echo'</p>';
+                echo '<p id="article-udes">'. get_the_author_meta('description') .'</p>';
+            echo '</div>';
+			echo '</div>';
+            echo '<hr>';
 		?>
+        <div id="article-coments">
+            <p><?php comments_number('0', '1', '%'); ?> comments <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+        </div>
+        <img src="" alt="">
 	</div><!-- .entry-content -->
 
 	<?php if ( is_single() ) : ?>

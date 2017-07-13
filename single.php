@@ -17,6 +17,10 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
+
+                if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
+                    the_post_thumbnail('post-thumbnail', ['id' => 'article-img']);
+                endif;
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 
@@ -24,7 +28,7 @@ get_header(); ?>
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
-						comments_template();
+//						comments_template();
 					endif;
 
 					the_post_navigation( array(

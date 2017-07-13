@@ -17,8 +17,10 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <?php wp_head(); ?>
 </head>
 
@@ -39,15 +41,6 @@
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
-
-	<?php
-	// If a regular post or page, and not the front page, show the featured image.
-	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
-		echo '<div class="single-featured-image-header">';
-		the_post_thumbnail( 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
