@@ -1516,14 +1516,6 @@ body {
 	word-wrap: break-word;
 }
 
-.wrap {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 700px;
-	padding-left: 2em;
-	padding-right: 2em;
-}
-
 .wrap:after {
 	clear: both;
 	content: "";
@@ -1858,9 +1850,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 	position: relative;
 }
 
-.site-content {
-	padding: 2.5em 0 0;
-}
 
 /*--------------------------------------------------------------
 13.4 Posts
@@ -2075,7 +2064,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .archive.page-one-column:not(.has-sidebar) #primary {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 740px;
+	max-width: 85%;
 }
 
 .single-featured-image-header {
@@ -3275,13 +3264,6 @@ object {
 	}
 
 	/* Layout */
-
-	.wrap {
-		max-width: 1000px;
-		padding-left: 3em;
-		padding-right: 3em;
-	}
-
 	.has-sidebar:not(.error404) #primary {
 		float: left;
 		width: 58%;
@@ -3705,10 +3687,6 @@ object {
 	}
 
 	/* Posts */
-
-	.site-content {
-		padding: 5.5em 0 0;
-	}
 
 	.single-post .entry-title,
 	.page .entry-title {
@@ -4378,6 +4356,15 @@ object {
 
     #article-content {
         width: 100%;
+    }
+
+    article {
+        width: 93%;
+        margin: 0 auto;
+    }
+
+    .article-prim {
+        max-width: 100% !important;
     }
 }
 /*article*/
