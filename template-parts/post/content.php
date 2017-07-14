@@ -72,6 +72,8 @@
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
 			) );
+        ?>
+        <?php
 			echo '<hr>';
 			echo '<div id="article-user">';
 			echo '<img id="article-avatar" src="' . get_avatar_url($post) . '" alt="">';

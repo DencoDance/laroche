@@ -1167,7 +1167,6 @@ a:active {
 
 /* Hover effects */
 
-.entry-content a,
 .entry-summary a,
 .widget a,
 .site-footer .widget-area a,
@@ -1257,12 +1256,8 @@ a:hover .nav-title,
 .site-info a:focus,
 .site-info a:hover,
 .widget .widget-title a:focus,
-.widget .widget-title a:hover,
-.widget ul li a:focus,
-.widget ul li a:hover {
-	color: #000;
-	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+.widget .widget-title a:hover{
+
 }
 
 /* Fixes linked images */
@@ -4246,7 +4241,7 @@ object {
 }
 
 #article-content {
-    width: 57%;
+    width: 70%;
 }
 
 #article-category {
@@ -4366,5 +4361,35 @@ object {
     .article-prim {
         max-width: 100% !important;
     }
+
+	#article-coments {
+		display: none;
+	}
+
+	#comments {
+		display: none;
+	}
+
+	.sharify-container li {
+		width: 142px;
+	}
+
+	#social-list {
+		max-width: 293px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and ( max-width: 1215px ) and (min-width: 783px) {
+	.clearfix {
+		display: block !important;
+	}
+
+	#social-list {
+		max-width: 351px;
+		width: 100%;
+		margin: 0 auto;
+	}
 }
 /*article*/
