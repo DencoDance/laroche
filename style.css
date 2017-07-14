@@ -4330,6 +4330,113 @@ object {
     color: black;
 }
 
+.sharify-btn-twitter{
+	height: 55px;
+	width: 170px;
+}
+.sharify-btn-twitter .sharify-icon{
+	float: left;
+	padding-left: 45%;
+	padding-top: 6%;
+	font-size: 23px;
+	color: white;
+}
+
+.sharify-btn-twitter .sharify-count{
+	display: block;	padding-right: 10px;
+	float: right;
+}
+
+.sharify-btn-facebook .sharify-icon{
+	float: left;
+	padding-left: 47%;
+	padding-top: 6%;
+	font-size: 23px;
+	color: white;
+}
+
+.sharify-btn-linkedin{
+	min-width: 10%;
+}
+
+.sharify-btn-linkedin .sharify-icon{
+	float: none;
+	text-align: center;	padding-left: 0px;
+	padding-top: 6%;
+	font-size: 23px;
+	display: block;
+	color: white;
+}
+
+
+.sharify-btn-linkedin .sharify-count{
+	display: none;
+	padding-right: 10px;
+	float: right;
+}
+
+.sharify-btn-linkedin .sharify-title{
+	display: none;
+}
+
+.sharify-btn-email{
+	min-width: 10%;
+}
+
+.sharify-btn-email .sharify-icon{
+	float: none;
+	text-align: center;
+	padding-left: 0px;
+	padding-top: 6%;
+	display: block;
+	font-size: 23px;
+	color: white;
+}
+
+
+.sharify-btn-email .sharify-count{
+	display: none;
+	padding-right: 10px;
+	float: right;
+}
+
+.sharify-btn-email .sharify-title{
+	display: none;
+}
+
+.sharify-container li{
+	font-family: Roboto Condensed, sans-serif;}
+
+.sharify-icon{
+	font-size: 13px;
+	line-height: 35px;
+}
+
+.sharify-container li .count{
+	background-color: transparent !important;
+}
+
+.sharify-btn-wa{
+	display: none;
+}
+.ismobilewa{
+	display: block !important;
+}
+.sharify-container{position:relative;display:block;width:100%;padding:20px 0;overflow:hidden}
+.sharify-container ul{padding:0;margin:0}
+.sharify-container li{list-style:none;height:55px;width:170px;line-height:36px;float:left;padding-left:2.5px}
+.sharify-container li a{border:0;background-color:#00ABF0;border-radius:3px;display:block;font-size:15px;line-height:37px;height:100%;color:#fff;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;width:100%;transition:all .2s ease-in-out}
+.sharify-count{float:right}
+.sharify-container li.sharify-btn-twitter a{background-color: #00ABF0;}
+.sharify-container li.sharify-btn-twitter a:hover{background-color:#3498db}
+.sharify-container li.sharify-btn-facebook a{background-color:#5970A6;}
+.sharify-container li.sharify-btn-facebook a:hover{background-color:#2E3F65;}
+.sharify-container li.sharify-btn-linkedin a{background-color: #127BB6;}
+.sharify-container li.sharify-btn-linkedin a:hover{background-color:#124866;}
+.sharify-container li.sharify-btn-email a{background-color:#191919;}
+.sharify-container li.sharify-btn-email a:hover{background-color: #363333;);}
+.sharify-container li{margin-bottom: 5px !important; margin-left: 1.5%;}
+
 .sharify-container li {
 	width: 170px;
 	border-radius: 3px;
@@ -4340,6 +4447,8 @@ object {
 	width: 100%;
 	margin: 0 auto;
 }
+
+
 
 @media screen and ( max-width: 782px ) {
     #article-user #article-avatar {
@@ -4403,4 +4512,5 @@ object {
 		margin: 0 auto;
 	}
 }
+
 /*article*/
