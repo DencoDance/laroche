@@ -20,7 +20,7 @@
 	?>
 	<header class="entry-header">
 		<?php
-            echo '<p id="article-date">'.mb_strtoupper(get_the_date( 'M j' )).'</p>';
+            echo '<p id="article-date" style="text-transform: uppercase;" >'.get_the_date( 'M j' ).'</p>';
 //			if ( 'post' === get_post_type() ) :
 //				echo '<div class="entry-meta">';
 //					if ( is_single() ) :
