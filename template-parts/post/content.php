@@ -79,7 +79,7 @@
                 </a>
             </li>
             <li class="sharify-btn-facebook">
-                <a title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=<?php echo wp_get_shortlink(); ?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                <a title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                     <span class="sharify-icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                 </a>
             </li></div><div style="display: none" class="clearfix"></div><div><li class="sharify-btn-linkedin">
