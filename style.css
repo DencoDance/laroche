@@ -4330,6 +4330,17 @@ object {
     color: black;
 }
 
+.sharify-container li {
+	width: 142px;
+	border-radius: 3px;
+}
+
+#social-list {
+	max-width: 609px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 @media screen and ( max-width: 782px ) {
     #article-user #article-avatar {
         float: none;
