@@ -4331,12 +4331,12 @@ object {
 }
 
 .sharify-container li {
-	width: 142px;
+	width: 170px;
 	border-radius: 3px;
 }
 
 #social-list {
-	max-width: 609px;
+	max-width: 724px;
 	width: 100%;
 	margin: 0 auto;
 }
