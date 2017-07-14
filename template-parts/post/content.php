@@ -41,9 +41,9 @@
 			}
 			$count = count(get_the_category());
 			$i = 1;
-            echo '<p id="article-category">';
+            echo '<p id="article-category" style="text-transform: uppercase;">';
             foreach (get_the_category() as $k) {
-			    echo mb_strtoupper($k->name);
+			    echo ($k->name);
 			    if ($count != $i) {
 			        echo ' | ';
                 }
@@ -117,3 +117,4 @@
 	<?php endif; ?>
 
 </article><!-- #post-## -->
+>>>>>>> b5a02f0b3f386f0318b6de7d0f0e1c1cb834dd3c
