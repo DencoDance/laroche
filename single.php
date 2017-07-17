@@ -46,7 +46,13 @@ get_header(); ?>
 
 <?php get_footer(); ?>
 <script>
+    if ($(window).width() <= '782'){
+        $('.site-content-contain').css('background-color', '#D7D7D7');
+    } else {
+        $('.site-content-contain').css('background-color', 'white');
+    }
     $(function () {
+
         $('#article-coments').click(function () {
             var comments = $('#comments');
             if (comments.is(':visible')) {

@@ -20,7 +20,7 @@
 	?>
 	<header class="entry-header">
 		<?php
-            echo '<p id="article-date">'.mb_strtoupper(get_the_date( 'M j' )).'</p>';
+            echo '<p id="article-date" style="text-transform: uppercase;" >'.get_the_date( 'M j' ).'</p>';
 //			if ( 'post' === get_post_type() ) :
 //				echo '<div class="entry-meta">';
 //					if ( is_single() ) :
@@ -41,9 +41,9 @@
 			}
 			$count = count(get_the_category());
 			$i = 1;
-            echo '<p id="article-category">';
+            echo '<p id="article-category" style="text-transform: uppercase;">';
             foreach (get_the_category() as $k) {
-			    echo mb_strtoupper($k->name);
+			    echo ($k->name);
 			    if ($count != $i) {
 			        echo ' | ';
                 }
@@ -72,6 +72,28 @@
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
 			) );
+        ?>
+        <div class="sharify-container"><ul id="social-list"><div id="adap-soc"><div><li class="sharify-btn-twitter">
+                <a title="Tweet on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo get_the_title().':'.wp_get_shortlink();?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                    <span class="sharify-icon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                </a>
+            </li>
+            <li class="sharify-btn-facebook">
+                <a title="Share on Facebook" href="http://www.facebook.com/sharer.php?s=100&p[url]=<?php echo get_permalink(); ?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                    <span class="sharify-icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                </a>
+            </li></div><div style="display: none" class="clearfix"></div><div><li class="sharify-btn-linkedin">
+                <a title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo wp_get_shortlink().'title='.get_the_title()?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
+                    <span class="sharify-icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                </a>
+            </li><li class="sharify-btn-email">
+                <a title="Share via mail" href="mailto:?subject=<?php echo get_the_title().'&body='.get_the_title() ?>">
+                    <span class="sharify-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <span class="sharify-title">Email</span>
+                </a>
+            </li></div><div class="clearfix"></div></div></ul>
+        </div>
+        <?php
 			echo '<hr>';
 			echo '<div id="article-user">';
 			echo '<img id="article-avatar" src="' . get_avatar_url($post) . '" alt="">';

@@ -1,0 +1,46 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3421137, 2017-07-13T10:44:27-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CenturyGothic by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/century-gothic/
+ * 
+ * Webfont: CenturyGothic-Italic by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/italic/
+ * 
+ * Webfont: CenturyGothic-Bold by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/bold/
+ * 
+ * Webfont: CenturyGothic-BoldItalic by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/bold-italic/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3421137
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Typeface &#x00A9; The Monotype Corporation plc. Data &#x00A9; The Monotype Corporation plc / Type Solutions Inc. 1990-91 All Rights Reserved
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3433d1");
+
+  
+@font-face {font-family: 'CenturyGothic';src: url('webfonts/3433D1_0_0.eot');src: url('webfonts/3433D1_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3433D1_0_0.woff2') format('woff2'),url('webfonts/3433D1_0_0.woff') format('woff'),url('webfonts/3433D1_0_0.ttf') format('truetype'),url('webfonts/3433D1_0_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'CenturyGothic-Italic';src: url('webfonts/3433D1_1_0.eot');src: url('webfonts/3433D1_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3433D1_1_0.woff2') format('woff2'),url('webfonts/3433D1_1_0.woff') format('woff'),url('webfonts/3433D1_1_0.ttf') format('truetype'),url('webfonts/3433D1_1_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'CenturyGothic-Bold';src: url('webfonts/3433D1_2_0.eot');src: url('webfonts/3433D1_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3433D1_2_0.woff2') format('woff2'),url('webfonts/3433D1_2_0.woff') format('woff'),url('webfonts/3433D1_2_0.ttf') format('truetype'),url('webfonts/3433D1_2_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'CenturyGothic-BoldItalic';src: url('webfonts/3433D1_3_0.eot');src: url('webfonts/3433D1_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3433D1_3_0.woff2') format('woff2'),url('webfonts/3433D1_3_0.woff') format('woff'),url('webfonts/3433D1_3_0.ttf') format('truetype'),url('webfonts/3433D1_3_0.svg#wf') format('svg');}
+ 
