@@ -117,4 +117,3 @@
 	<?php endif; ?>
 
 </article><!-- #post-## -->
->>>>>>> b5a02f0b3f386f0318b6de7d0f0e1c1cb834dd3c
