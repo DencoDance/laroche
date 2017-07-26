@@ -14,54 +14,99 @@
  * @since 1.0
  * @version 1.0
  */
+get_header();
+ 
+wp_enqueue_script('dotdotdot', get_theme_file_uri('/assets/js/jquery.dotdotdot.min.js'));
+?>
 
-get_header(); ?>
+    <div class="wrap">
 
-<div class="wrap">
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title"><?php single_post_title(); ?></h1>
-		</header>
-	<?php else : ?>
-	<header class="page-header">
-		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
-	</header>
-	<?php endif; ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
 
-			<?php
-			if ( have_posts() ) :
+                <?php
+                echo '<div id="heading-blog"><h1 id="header-blog">' . get_post_meta(178, 'main_headling')[0] . '</h1>';
+                echo '<p id="subheader-blog">' . get_post_meta(178, 'sub_headling')[0] . '</p></div>';
+                if (have_posts()) :
+                    $i = 1;
+                    $a = 1;
+                    /* Start the Loop */
+                    $query = new WP_Query([
+                        'post_type' => 'post',
+                        'orderby' => 'date',
+                        'order' => 'ASC',
+                        'hide_empty' => 1,
+                        'depth' => 1,
+                        'posts_per_page' => -1
+                    ]);
+                    while ($query->have_posts()) : $query->the_post();
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+                        /*
+                         * Include the Post-Format-specific template for the content.
+                         * If you want to override this in a child theme, then include a file
+                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                         */
+                        
+//                        if (get_post_type() != 'case_study') {
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/post/content', get_post_format() );
+                            echo '<div id="animate' . $a . '">';
+                            if ($a == 3) {
+                                $a = 0;
+                            }
+                            get_template_part('template-parts/post-blog/post-content', get_post_format());
+                            echo '</div>';
+                            if ($i % 6 == 0) {
+                                echo '<div class="clearfix"></div><div id="hide-mobile"><hr><div id="article-laptop-send">' . do_shortcode("[mc4wp_form id=\"162\"]") . '</div><hr></div>';
+                            }
+                            if ($i % 3 == 0) {
+                                echo '<div class="clearfix"></div><div id="hide-laptop"><hr><div id="article-mobile-send">' . do_shortcode("[mc4wp_form id=\"162\"]") . '</div><hr></div>';
+                            }
+                            $i++;
+                            $a++;
 
-				endwhile;
+//                        }
+                    endwhile;
+                endif;
 
-				the_posts_pagination( array(
-					'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-				) );
+                ?>
 
-			else :
+            </main><!-- #main -->
 
-				get_template_part( 'template-parts/post/content', 'none' );
+        </div><!-- #primary -->
+        <?php get_sidebar(); ?>
+    </div><!-- .wrap -->
+    <script>
+        (function ($) {
+            var truncate = function (el) {
+                var text = el.text(),
+                    height = el.height(),
+                    clone = el.clone();
 
-			endif;
-			?>
+                clone.css({
+                    position: 'absolute',
+                    visibility: 'hidden',
+                    height: 'auto'
+                });
+                el.after(clone);
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+                var l = text.length - 1;
+                for (; l >= 0 && clone.height() > height; --l) {
+                    clone.text(text.substring(0, l) + '...');
+                }
 
+                el.text(clone.text());
+                clone.remove();
+            };
+
+            $.fn.truncateText = function () {
+                return this.each(function () {
+                    truncate($(this));
+                });
+            };
+        }($));
+        $(function () {
+            $('.box').truncateText();
+        });
+    </script>
 <?php get_footer();

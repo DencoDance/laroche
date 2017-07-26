@@ -1,0 +1,620 @@
+div, p, a, li, td { -webkit-text-size-adjust:none; }
+
+.partner-hero {
+  height:700px;
+
+}
+
+.partner {
+  max-width:500px;
+  margin-left:135px;
+}
+.partnert h2{
+  color:#ffffff;
+  font-size:36px;
+  line-height:44px;
+  font-family: 'Century Gothic';
+  font-weight:bold;
+}
+
+.partnert p{
+  font-size:20px;
+  line-height:28px;
+  font-family: 'Century Gothic';
+  color:#ffffff;
+
+}
+
+.partner-arrow a{
+  cursor: pointer;
+  display:none;
+}
+
+.partner-hero-btn button{
+  border: 1px solid #979797 !important;
+  padding: 17px 52px 17px 52px !important;
+  font-size: 18px !important;
+  line-height: 22px !important;
+  font-family: 'Century Gothic'!important;
+}
+
+.cur-partners-h p{
+  color:rgba(0, 0, 0, 0.3);
+  font-size:18px;
+  line-height:22px;
+  font-weight:bold;
+  font-family: 'Century Gothic';
+
+}
+
+.partner-logos {
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.partner-logo{
+  padding: 0 2%;
+}
+
+.agency-txt {
+  font-size:30px;
+  line-height:44px;
+  font-family: 'Century Gothic';
+  max-width:1026px;
+  margin:0 auto;
+  padding-top:150px;
+}
+
+.icons{
+  max-width:1026px;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+}
+
+.icon-container{
+
+  width:120px;
+  height:100px;
+  position:relative;
+  margin: 0 25px;
+
+}
+
+.icon-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size:16px;
+  line-height:20px;
+  font-family: 'Century Gothic';
+  font-weight:bold;
+}
+
+.icon-text p{
+  margin-bottom:0px;
+}
+
+.iconps {
+  border: 1.6px solid rgba(151, 151, 151, 0.2);
+  border-radius: 80px;
+  width:100px;
+  height:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: auto;
+}
+
+.double {
+  height:600px;
+}
+
+.grey-text {
+  max-width:520px;
+  margin: auto;
+  position:relative;
+}
+
+.grey-text h2{
+  margin-bottom:50px;
+  font-size:30px;
+  line-height:37px;
+  font-family: 'Century Gothic';
+  font-weight:bold;
+  color: #000000;
+}
+
+.grey-text p{
+  font-size:20px;
+  line-height:28px;
+  font-family: 'Century Gothic';
+}
+
+.red-line {
+  width: 100%;
+  max-width: 120px;
+  height: 5px;
+  background: #FE3939;
+  position: absolute;
+  top: 48px;
+}
+
+.h-it-w h2{
+  font-size:30px;
+  line-height:37px;
+  font-family: 'Century Gothic';
+  font-weight:bold;
+  color: #000000;
+}
+
+.h-it-w .red-line {
+  width: 100%;
+  max-width: 180px;
+  height: 2px;
+  background: #FE3939;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.h-it-w-4 {
+  max-width:1206px;
+  margin: 0 auto;
+}
+
+.h-it-w-4-block {
+  max-width:480px;
+  position:relative;
+  margin: auto;
+}
+
+.h-it-w-4t {
+  position:relative;
+}
+
+.h-it-w-4-block-num{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #FE3939;
+  top: 0;
+  max-width: 50px;
+  max-height: 50px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(151, 151, 151, 0.3);;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.h-it-w-4 h3{
+  font-size:20px;
+  line-height:24px;
+  font-family: 'Century Gothic';
+  font-weight:bold;
+  padding-left:70px;
+  color: #000000;
+}
+
+.h-it-w-4 p{
+  font-size:20px;
+  line-height:28px;
+  font-family: 'Century Gothic';
+  padding-left:70px;
+}
+
+.h-it-w-4 a{
+  border-bottom: 1px solid #fe3939;
+  color: #fe3939;
+  padding-bottom: 2px;
+  cursor:pointer;
+  font-size: 16px;
+
+}
+
+.h-it-w-4 a:hover{
+  text-decoration: none;
+}
+
+.become-par{
+  position:relative;
+  max-width:525px;
+  margin:auto;
+}
+
+.become-par h2{
+  font-size:30px;
+  line-height:37px;
+  font-family: 'Century Gothic';
+  font-weight:bold;
+  color: #000000;
+}
+
+.become-par p{
+  font-size:20px;
+  line-height:28px;
+  font-family: 'Century Gothic';
+}
+
+.become-par a, .become-par button {
+  margin-top: 40px;
+  font-size: 18px !important;
+  line-height: 22px !important;
+  background-color: #fe3939 !important;
+  padding: 15px 45px !important;
+  font-family: 'Century Gothic';
+}
+
+.arr-col, .mob2block{
+  display:none !important;
+}
+
+.mr0 {
+  margin-right:0px;
+}
+
+.ml0 {
+  margin-left:0px;
+}
+
+.m0{
+  margin:0px;
+}
+
+/*Slider settings*/
+#slider-range-min {
+  width: 350px;
+  height: 24px;
+  border-radius: 100px;
+  background-color: #F3F3F3;
+}
+
+#amount {
+  opacity: 0.4;
+  color: #3B3B3B !important;
+  font-family: "Century Gothic";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: right;
+  width: 100px;
+  padding: 0;
+  float: right;
+  margin-top: 15px;
+  margin-right: 39px;
+  background-color: inherit !important;
+}
+
+.ui-slider-handle {
+  height: 39.01px !important;
+  width: 39.01px !important;
+  background-color: rgb(30, 30, 30) !important;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 50%;
+  top: -8px !important;
+  border: 0px !important;
+}
+
+.ui-slider-range {
+  background: #FE3939;
+  border-radius: 100px 0px 0px 100px;
+}
+
+#slider-range-min {
+  margin: 0 auto;
+}
+
+#box-for-slider {
+  height: 310px;
+  max-width: 471px;
+  box-shadow: 0 8px 15px 0 rgba(0,0,0,0.08);
+  padding: 3%
+}
+
+#procent {
+  padding-top: 80px;
+  margin-bottom: 45px;
+  color: #222222;
+  font-family: "Century Gothic";
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 44px;
+  text-align: center;
+}
+
+#deal {
+  color: #3B3B3B;
+  font-family: "Century Gothic";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  opacity: 0.4;
+  float: left;
+  margin-top: 15px;
+  padding-left: 35px;
+}
+
+.ui-state-active {
+  border: 0px !important;
+  background: black !important;
+}
+
+#text-box {
+  width: 350px;
+  margin: 0 auto;
+}
+
+/*Responsive slider settings*/
+@media (max-width: 910px) {
+  #box-for-slider {
+	height: 260px;
+	width: 80%;
+	margin: 0 auto;
+  }
+
+  #procent {
+	padding-top: 40px;
+  }
+
+  #slider-range-min {
+	width: 80%;
+  }
+
+  #text-box {
+	width: 80%;
+	height: 1px;
+  }
+}
+
+@media (max-width: 425px){
+  #deal {
+	padding-left:18px;
+  }
+
+  #amount {
+	margin-right:24px;
+  }
+}
+
+/*Responsive settings*/
+
+@media only screen and (max-width: 887px) and (min-width: 768px)  {
+  .grey-text h2 {
+	font-size:25px;
+  }
+}
+
+@media only screen and (max-width: 445px) and (min-width: 425px)  {
+  .grey-text h2 {
+	font-size:25px;
+  }
+}
+
+@media (max-width: 910px) {
+
+  .double {
+	height:100%;
+  }
+
+  .partner {
+	max-width:500px;
+	margin:auto;
+
+  }
+
+  .icons{
+	flex-wrap: wrap;
+  }
+
+  .icon-container {
+	width: 40%;
+	height: 100px;
+	margin: 50px auto !important;
+
+  }
+}
+
+@media (max-width: 767px) {
+
+  .order1{
+	order:1;
+	min-height:350px;
+
+  }
+
+  .order2{
+	order:2;
+
+  }
+
+  .order3{
+	order:3;
+	min-height:350px;
+  }
+
+  .order4{
+	order:4;
+  }
+
+  .double-img {
+
+  }
+
+  .partner-logos {
+	flex-wrap: wrap;
+  }
+
+  .partner-logo {
+	padding: 28px 8px;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+
+  }
+
+  .agency-txt{
+	font-size: 20px;
+	line-height: 37px;
+	padding-top:50px;
+  }
+
+  .icon-container {
+	margin: 50px auto !important;
+
+  }
+}
+
+
+@media (max-width: 425px) {
+
+  div.vc_row.wpb_row.vc_row-fluid.partner-hero.vc_custom_1500899874175.vc_row-has-fill.vc_row-o-content-middle.vc_row-flex {
+	background-position: 66% 0px !important;
+  }
+
+  .mob2block{
+	display:flex;
+  }
+
+  .arr-col{
+	display:block !important;
+	position:absolute;
+	bottom:15px;
+	z-index: 1000;
+  }
+
+  .arr-col .vc_column-inner {
+	display: block !important;
+  }
+
+  .arr-col .vc_column-inner .wpb_wrapper {
+	display: block !important;
+  }
+
+  .arrow-wrap .wpb_wrapper {
+	display: block !important;
+  }
+
+  .partner-hero {
+	height:100vh;
+  }
+
+  .icon-container {
+	margin: 50px auto !important;
+
+  }
+
+  .partner {
+	max-width:500px;
+	margin:20px;
+	margin:auto;
+  }
+  .partnert h2{
+	color:#ffffff;
+	font-size:25px;
+	line-height:40px;
+	font-family: 'Century Gothic';
+	font-weight:bold;
+	text-align:center;
+  }
+
+  .partnert p{
+	display:none;
+
+  }
+
+  .partnert-mob p{
+	font-size:20px;
+	line-height:28px;
+	font-family: 'Century Gothic';
+
+  }
+
+
+  .partner-hero-btn button{
+	display:none !important;
+  }
+
+  .partner-hero-btn-mob button{
+
+	padding: 23px 50px !important;
+	font-size: 18px !important;
+	line-height: 22px !important;
+	font-family: 'Century Gothic'!important;
+  }
+
+  .partner-logo {
+	padding: 28px 8px;
+
+  }
+
+  .arrow-wrap{
+	display: block;
+	margin:0 auto;
+	width: 23px;
+  }
+  .partner-arrow a{
+	display: block;
+	color: #ffffff;
+	font-size: 45px;
+	font-weight: bold;
+	text-decoration: none;
+  }
+
+  .grey-text h2 {
+	font-size:25px;
+  }
+
+  .h-it-w-4 h3{
+	font-size:20px;
+	line-height:24px;
+	font-family: 'Century Gothic';
+	font-weight:bold;
+	padding-top:70px;
+	padding-left:0;
+	color: #000000;
+  }
+
+  .h-it-w-4 p{
+	font-size:20px;
+	line-height:28px;
+	font-family: 'Century Gothic';
+	padding-left:0;
+  }
+}
+
+@media (max-width: 378px) {
+    
+  .grey-text h2 {
+	font-size:20px;
+  }
+
+  .grey-text p {
+	font-size:18px;
+  }
+}
+
+@media (max-width: 300px) {
+  .grey-text h2 {
+	font-size:18px;
+	
+  }
+
+  .grey-text p {
+	font-size:17px;
+	
+  }
+  
+  .icon-text {
+	  font-size: 14px;
+	  -webkit-text-size-adjust:80% !important;
+  }
+}
+
+
+/*End of Responsive settings*/

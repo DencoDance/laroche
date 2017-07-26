@@ -51,6 +51,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 
+@import url("//hello.myfonts.net/count/3433d1");
+
+
+@font-face {font-family: 'Century Gothic';src: url('/wp-content/themes/laroche/assets/fonts/3433D1_0_0.eot');src: url('/wp-content/themes/laroche/assets/fonts/3433D1_0_0.eot?#iefix') format('embedded-opentype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_0_0.woff2') format('woff2'),url('/wp-content/themes/laroche/assets/fonts/3433D1_0_0.woff') format('woff'),url('/wp-content/themes/laroche/assets/fonts/3433D1_0_0.ttf') format('truetype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_0_0.svg#wf') format('svg');}
+
+
+@font-face {font-family: 'Century Gothic-Italic';src: url('/wp-content/themes/laroche/assets/fonts/3433D1_1_0.eot');src: url('/wp-content/themes/laroche/assets/fonts/3433D1_1_0.eot?#iefix') format('embedded-opentype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_1_0.woff2') format('woff2'),url('/wp-content/themes/laroche/assets/fonts/3433D1_1_0.woff') format('woff'),url('/wp-content/themes/laroche/assets/fonts/3433D1_1_0.ttf') format('truetype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_1_0.svg#wf') format('svg');}
+
+
+@font-face {font-family: 'Century Gothic-Bold';src: url('/wp-content/themes/laroche/assets/fonts/3433D1_2_0.eot');src: url('/wp-content/themes/laroche/assets/fonts/3433D1_2_0.eot?#iefix') format('embedded-opentype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_2_0.woff2') format('woff2'),url('/wp-content/themes/laroche/assets/fonts/3433D1_2_0.woff') format('woff'),url('/wp-content/themes/laroche/assets/fonts/3433D1_2_0.ttf') format('truetype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_2_0.svg#wf') format('svg');}
+
+
+@font-face {font-family: 'Century Gothic-BoldItalic';src: url('/wp-content/themes/laroche/assets/fonts/3433D1_3_0.eot');src: url('/wp-content/themes/laroche/assets/fonts/3433D1_3_0.eot?#iefix') format('embedded-opentype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_3_0.woff2') format('woff2'),url('/wp-content/themes/laroche/assets/fonts/3433D1_3_0.woff') format('woff'),url('/wp-content/themes/laroche/assets/fonts/3433D1_3_0.ttf') format('truetype'),url('/wp-content/themes/laroche/assets/fonts/3433D1_3_0.svg#wf') format('svg');}
+
+
 html {
 	font-family: sans-serif;
 	line-height: 1.15;
@@ -2059,7 +2074,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .archive.page-one-column:not(.has-sidebar) #primary {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 85%;
+	max-width: 100%;
 }
 
 .single-featured-image-header {
@@ -2272,6 +2287,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 --------------------------------------------------------------*/
 
 .site-footer {
+	background: #F9F9F9;
 	border-top: 1px solid #eee;
 }
 
@@ -2283,10 +2299,33 @@ body:not(.twentyseventeen-front-page) .entry-header {
 /* Footer widgets */
 
 .site-footer .widget-area {
+	font-family: "Century Gothic";
+	width: 50%;
+	margin: 0 auto;
 	padding-bottom: 2em;
 	padding-top: 2em;
 }
 
+.site-footer .widget-area .textwidget{
+	font-size: 18px;
+	line-height: 26px;
+	color: #000;
+}
+.site-footer .widget-column.footer-widget-1 .textwidget, .site-footer .widget-column.footer-widget-3 .textwidget{
+	color: #4a4a4a;
+}
+
+a.mailto{
+	color: #FE3939;
+	font-size: 18px;
+	line-height: 26px;
+	-webkit-box-shadow: inset 0 -1px 0 #FE3939 !important;
+	box-shadow: inset 0 -1px 0 #FE3939 !important;
+	padding-bottom: 1px;
+}
+a.mailto:hover{
+	text-decoration: none;
+}
 /* Social nav */
 
 .social-navigation {
@@ -3098,6 +3137,77 @@ object {
 	width: auto;
 }
 
+/*portfolio posts*/
+.portfolio-posts{
+	position: relative;
+	width: 100%;
+}
+.portfolio-posts .portfolio-post{
+	width: 50%;
+	float: left;
+	padding: 0 45px;
+	transition: 0.8s all ease;
+	position: inherit;
+	top: 50px;
+}
+.portfolio-posts .portfolio-post:first-child{
+	margin-top: 0;
+}
+.portfolio-posts .portfolio-post:nth-child(2){
+	margin-top: 112px;
+}
+.portfolio-posts .portfolio-post-img{
+	padding: 15% 0;
+	transition:  all .8s ease;
+}
+.portfolio-posts .portfolio-post-title {
+	margin-top: 25px;
+	color: #292929;
+	font-family: "Century Gothic";
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 29px;
+	text-align: center;
+}
+.portfolio-posts .portfolio-post-cat{
+	color: #5E5E5E;
+	font-family: "Century Gothic";
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+}
+.portfolio-posts .portfolio-post.visible{
+	top: 0;
+}
+.portfolio-posts .portfolio-post.visible .portfolio-post-img{
+	padding: 30% 15%;
+}
+.portfolio-posts .portfolio-post .portfolio-post-img img{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.portfolio-posts .portfolio-post a:hover, .portfolio-posts .portfolio-post a:focus{
+	text-decoration: none;
+}
+.portfolio-posts .portfolio-post .portfolio-post-img img{
+	transition: all 0.8s ease;
+}
+.portfolio-posts .portfolio-post:hover .portfolio-post-img{
+	transform: scale(0.95);
+	-webkit-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	overflow: hidden;
+}
+.portfolio-posts .portfolio-post:hover .portfolio-post-img img{
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	overflow: hidden;
+}
 /*--------------------------------------------------------------
 19.0 Media Queries
 --------------------------------------------------------------*/
@@ -3238,7 +3348,7 @@ object {
 	}
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 62em) {
 
 	/* Typography */
 
@@ -3907,17 +4017,20 @@ object {
 		font-size: 14px;
 		font-size: 0.875rem;
 		line-height: 1.6;
-		margin-top: 3em;
+		/*margin-top: 3em;*/
 	}
 
-	.site-footer .widget-column.footer-widget-1 {
+	.site-footer .widget-column {
 		float: left;
-		width: 36%;
+		width: 33%;
+		padding: 10px;
 	}
-
+	.site-footer .widget-column.footer-widget-1 {
+		width: 40%;
+	}
 	.site-footer .widget-column.footer-widget-2 {
-		float: right;
-		width: 58%;
+		text-align: left;
+		width: 27%;
 	}
 
 	.social-navigation {
@@ -4207,310 +4320,18 @@ object {
 	}
 }
 
-
-
-
-/*article*/
-#article-img {
-    display: block;
-    width: 100%;
-}
-
-#article-date {
-    margin: 0 auto;
-    opacity: 0.4;
-    color: #000000;
-    font-family: "Century Gothic";
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 20px;
-    text-align: center;
-    margin-top: 4%;
-}
-
-#article-header {
-    opacity: 0.9;
-    color: #000000;
-    font-family: "Century Gothic";
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 44px;
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-
-#article-content {
-    width: 70%;
-}
-
-#article-category {
-    opacity: 0.4;
-    color: #000000;
-    font-family: "Century Gothic";
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 20px;
-    text-align: center;
-}
-
-#article-content hr {
-    opacity: 0.3;
-    background-color: #979797;
-    height: 1px;
-    margin-bottom: 0px;
-}
-
-#article-content p {
-    opacity: 0.6;
-    color: #000000;
-    font-family: "Century Gothic";
-    font-size: 20px;
-    line-height: 30px;
-}
-
-#article-user {
-    min-height: 130px;
-    margin-bottom: 13%;
-    margin-top: 13%;
-}
-
-#article-utext {
-    padding-left: 39%;
-    display: inline;
-}
-
-#article-utext #article-uname {
-    color: #000000;
-    font-family: "Century Gothic";
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 24px;
-    margin: 0px;
-    margin-bottom: 8px;
-    opacity: 1;
-}
-
-#article-utext #article-udes {
-    opacity: 0.4;
-    color: #000000;
-    font-family: "Century Gothic";
-    font-size: 20px;
-    line-height: 29px;
-}
-
-#article-user #article-avatar {
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 10%;
-}
-
-#article-coments {
-    height: 60px;
-    width: 221px;
-    border: 1px solid #DEDEDE;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-#article-coments p {
-    color: #7F7F7F;
-    font-family: "Century Gothic";
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    padding-top: 6%;
-}
-
-#article-coments p i {
-    opacity: 0.5;
-    font-size: 12px;
-    color: black;
-}
-
-.sharify-btn-twitter{
-	height: 55px;
-	width: 170px;
-}
-.sharify-btn-twitter .sharify-icon{
-	float: left;
-	padding-left: 45%;
-	padding-top: 6%;
-	font-size: 23px;
-	color: white;
-}
-
-.sharify-btn-twitter .sharify-count{
-	display: block;	padding-right: 10px;
-	float: right;
-}
-
-.sharify-btn-facebook .sharify-icon{
-	float: left;
-	padding-left: 47%;
-	padding-top: 6%;
-	font-size: 23px;
-	color: white;
-}
-
-.sharify-btn-linkedin{
-	min-width: 10%;
-}
-
-.sharify-btn-linkedin .sharify-icon{
-	float: none;
-	text-align: center;	padding-left: 0px;
-	padding-top: 6%;
-	font-size: 23px;
-	display: block;
-	color: white;
-}
-
-
-.sharify-btn-linkedin .sharify-count{
-	display: none;
-	padding-right: 10px;
-	float: right;
-}
-
-.sharify-btn-linkedin .sharify-title{
-	display: none;
-}
-
-.sharify-btn-email{
-	min-width: 10%;
-}
-
-.sharify-btn-email .sharify-icon{
-	float: none;
-	text-align: center;
-	padding-left: 0px;
-	padding-top: 6%;
-	display: block;
-	font-size: 23px;
-	color: white;
-}
-
-
-.sharify-btn-email .sharify-count{
-	display: none;
-	padding-right: 10px;
-	float: right;
-}
-
-.sharify-btn-email .sharify-title{
-	display: none;
-}
-
-.sharify-container li{
-	font-family: Roboto Condensed, sans-serif;}
-
-.sharify-icon{
-	font-size: 13px;
-	line-height: 35px;
-}
-
-.sharify-container li .count{
-	background-color: transparent !important;
-}
-
-.sharify-btn-wa{
-	display: none;
-}
-.ismobilewa{
-	display: block !important;
-}
-.sharify-container{position:relative;display:block;width:100%;padding:20px 0;overflow:hidden}
-.sharify-container ul{padding:0;margin:0}
-.sharify-container li{list-style:none;height:55px;width:170px;line-height:36px;float:left;padding-left:2.5px}
-.sharify-container li a{border:0;background-color:#00ABF0;border-radius:3px;display:block;font-size:15px;line-height:37px;height:100%;color:#fff;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;width:100%;transition:all .2s ease-in-out}
-.sharify-count{float:right}
-.sharify-container li.sharify-btn-twitter a{background-color: #00ABF0;}
-.sharify-container li.sharify-btn-twitter a:hover{background-color:#3498db}
-.sharify-container li.sharify-btn-facebook a{background-color:#5970A6;}
-.sharify-container li.sharify-btn-facebook a:hover{background-color:#2E3F65;}
-.sharify-container li.sharify-btn-linkedin a{background-color: #127BB6;}
-.sharify-container li.sharify-btn-linkedin a:hover{background-color:#124866;}
-.sharify-container li.sharify-btn-email a{background-color:#191919;}
-.sharify-container li.sharify-btn-email a:hover{background-color: #363333;);}
-.sharify-container li{margin-bottom: 5px !important; margin-left: 1.5%;}
-
-.sharify-container li {
-	width: 170px;
-	border-radius: 3px;
-}
-
-#social-list {
-	max-width: 724px;
-	width: 100%;
-	margin: 0 auto;
-}
-
-
-
 @media screen and ( max-width: 782px ) {
-    #article-user #article-avatar {
-        float: none;
-        margin: 0 auto;
-        display: block;
-    }
-
-    #article-utext #article-udes {
-        text-align: center;
-    }
-
-    #article-utext #article-uname {
-        text-align: center;
-    }
-
-    #article-utext {
-        padding-left: 0%;
-    }
-
-    #article-content {
-        width: 100%;
-    }
-
-    article {
-        width: 93%;
-        margin: 0 auto;
-    }
-
-    .article-prim {
-        max-width: 100% !important;
-    }
-
-	#article-coments {
-		display: none;
+	.site-footer .widget-area {
+		width: 90%;
 	}
 
-	#comments {
-		display: none;
-	}
-
-	.sharify-container li {
-		width: 142px;
-	}
-
-	#social-list {
-		max-width: 293px;
-		width: 100%;
-		margin: 0 auto;
+	.widget-column.footer-widget-2{
+		text-align: left;
 	}
 }
 
 @media screen and ( max-width: 1215px ) and (min-width: 783px) {
-	.clearfix {
-		display: block !important;
-	}
-
-	#social-list {
-		max-width: 351px;
-		width: 100%;
-		margin: 0 auto;
+	.site-footer .widget-area {
+		width: 70%;
 	}
 }
-
-/*article*/

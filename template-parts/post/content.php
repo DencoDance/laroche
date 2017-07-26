@@ -64,25 +64,21 @@
 	<div id="article-content" class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
-            the_content();
+            echo '<div id="margin-content">';
+			the_content();
+            echo '</div>';
 
-			wp_link_pages( array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			) );
         ?>
-        <div class="sharify-container"><ul id="social-list"><div id="adap-soc"><div><li class="sharify-btn-twitter">
+        <div class="sharify-container"><ul id="social-list"><div id="adap-soc"><div><li class="margines sharify-btn-twitter">
                 <a title="Tweet on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo get_the_title().':'.wp_get_shortlink();?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                     <span class="sharify-icon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
                 </a>
             </li>
-            <li class="sharify-btn-facebook">
+            <li class="margines sharify-btn-facebook">
                 <a title="Share on Facebook" href="http://www.facebook.com/sharer.php?s=100&p[url]=<?php echo get_permalink(); ?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                     <span class="sharify-icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                 </a>
-            </li></div><div style="display: none" class="clearfix"></div><div><li class="sharify-btn-linkedin">
+            </li></div><div style="display: none" class="clearfix"></div><div><li class="margines sharify-btn-linkedin">
                 <a title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo wp_get_shortlink().'title='.get_the_title()?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
                     <span class="sharify-icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
                 </a>
@@ -112,9 +108,4 @@
         <div style="display: none" id="comments"><?php comments_template(); ?></div>
 	</div><!-- .entry-content -->
 
-	<?php if ( is_single() ) : ?>
-		<?php twentyseventeen_entry_footer(); ?>
-	<?php endif; ?>
-
 </article><!-- #post-## -->
->>>>>>> b5a02f0b3f386f0318b6de7d0f0e1c1cb834dd3c

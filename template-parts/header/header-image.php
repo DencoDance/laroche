@@ -7,7 +7,8 @@
  * @since 1.0
  * @version 1.0
  */
-
+    $kek = get_custom_header_markup();
+   if ($kek) :
 ?>
 <div class="custom-header">
 
@@ -15,6 +16,8 @@
 		<?php the_custom_header_markup(); ?>
 	</div>
 
-	<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+<!--	--><?php //get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
 </div><!-- .custom-header -->
+<?php
+endif;?>

@@ -9,45 +9,24 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
-
-	<?php if ( has_post_thumbnail() ) :
-		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'twentyseventeen-featured-image' );
-
-		$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
-
-		$thumbnail_attributes = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'twentyseventeen-featured-image' );
-
-		// Calculate aspect ratio: h / w * 100%.
-		$ratio = $thumbnail_attributes[2] / $thumbnail_attributes[1] * 100;
-		?>
-
-		<div class="panel-image" style="background-image: url(<?php echo esc_url( $thumbnail[0] ); ?>);">
-			<div class="panel-image-prop" style="padding-top: <?php echo esc_attr( $ratio ); ?>%"></div>
-		</div><!-- .panel-image -->
-
-	<?php endif; ?>
-
-	<div class="panel-content">
-		<div class="wrap">
-			<header class="entry-header">
-				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-
-				<?php twentyseventeen_edit_link( get_the_ID() ); ?>
-
-			</header><!-- .entry-header -->
-
-			<div class="entry-content">
-				<?php
-					/* translators: %s: Name of current post */
-					the_content( sprintf(
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-						get_the_title()
-					) );
-				?>
-			</div><!-- .entry-content -->
-
-		</div><!-- .wrap -->
-	</div><!-- .panel-content -->
-
-</article><!-- #post-## -->
+<a href="<?php echo get_permalink(); ?>">
+    <article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
+                <header class="entry-header">
+                    <?php
+                        the_title( '<h2 class="entry-title">', '</h2>' );
+    //                    echo get_permalink();
+                    ?>
+                    <svg class="arrow" width="11px" height="21px" viewBox="0 0 12 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+                        <title>Page 1 Copy 4</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Homepage" transform="translate(-1308.000000, -4143.000000)" fill="#FE3939">
+                                <path d="M1319.17225,4153.33982 L1309.08257,4143.18702 C1308.83476,4142.93766 1308.43259,4142.93766 1308.18586,4143.18702 C1307.93805,4143.43638 1307.93805,4143.84106 1308.18586,4144.08934 L1317.82716,4153.79097 L1308.18586,4163.4926 C1307.93805,4163.74195 1307.93805,4164.14664 1308.18586,4164.39492 C1308.30976,4164.5196 1308.47146,4164.58194 1308.63423,4164.58194 C1308.79699,4164.58194 1308.95868,4164.5196 1309.0826,4164.39492 L1319.17227,4154.24212 C1319.42113,4153.99276 1319.42113,4153.58913 1319.17227,4153.33979 L1319.17225,4153.33982 Z" id="Page-1-Copy-4"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </header><!-- .entry-header -->
+    </article><!-- #post-## -->
+</a>
