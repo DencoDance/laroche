@@ -229,13 +229,6 @@ button::-moz-focus-inner,
 	padding: 0;
 }
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
-}
-
 fieldset {
 	border: 1px solid #bbb;
 	margin: 0 2px;
@@ -1171,7 +1164,7 @@ a {
 }
 
 a:focus {
-	outline: thin dotted;
+	outline: none;
 }
 
 a:hover,
@@ -1400,6 +1393,11 @@ a:hover .nav-title,
 	text-decoration: none;
 }
 
+.logo a {
+    padding-bottom: 1px !important;
+    padding-top: 12px !important;
+}
+
 .main-navigation a:hover {
 	color: #767676;
 }
@@ -1440,7 +1438,7 @@ a:hover .nav-title,
 }
 
 .menu-toggle:focus {
-	outline: thin solid;
+	outline: none;
 }
 
 .menu-toggle .icon {
@@ -1482,7 +1480,7 @@ a:hover .nav-title,
 }
 
 .dropdown-toggle:focus {
-	outline: thin dotted;
+	outline: none;
 }
 
 .dropdown-toggle.toggled-on .icon {
@@ -2288,7 +2286,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 .site-footer {
 	background: #F9F9F9;
-	border-top: 1px solid #eee;
 }
 
 .site-footer .wrap {
@@ -3153,7 +3150,7 @@ object {
 .portfolio-posts .portfolio-post:first-child{
 	margin-top: 0;
 }
-.portfolio-posts .portfolio-post:nth-child(2){
+.portfolio-posts .portfolio-post:nth-child(2n){
 	margin-top: 112px;
 }
 .portfolio-posts .portfolio-post-img{
@@ -3163,18 +3160,18 @@ object {
 .portfolio-posts .portfolio-post-title {
 	margin-top: 25px;
 	color: #292929;
-	font-family: "Century Gothic";
+	font-family: "Century Gothic-Bold";
 	font-size: 24px;
-	font-weight: bold;
 	line-height: 29px;
 	text-align: center;
 }
 .portfolio-posts .portfolio-post-cat{
-	color: #5E5E5E;
 	font-family: "Century Gothic";
-	font-size: 20px;
 	line-height: 30px;
 	text-align: center;
+	color: black;
+	font-size: 18px;
+	opacity: 0.5;
 }
 .portfolio-posts .portfolio-post.visible{
 	top: 0;
@@ -3207,6 +3204,32 @@ object {
 	-ms-transform: scale(1.2);
 	-moz-transform: scale(1.2);
 	overflow: hidden;
+}
+footer .wrap {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+aside {
+	padding-top: 84px !important;
+	padding-bottom: 35px !important;
+}
+@media (max-width: 1024px) {
+	.portfolio-posts .portfolio-post:nth-child(2n){
+		margin-top: 0;
+	}
+	.portfolio-posts-container, #portfolio{
+		width: 100% !important;
+	}
+	.portfolio-posts .portfolio-post{
+		margin-bottom: 50px;
+		padding: 0 15px;
+	}
+}
+@media (max-width: 425px) {
+	.portfolio-posts .portfolio-post-cat{
+		display: none;
+	}
 }
 /*--------------------------------------------------------------
 19.0 Media Queries
@@ -3696,7 +3719,7 @@ object {
 	}
 
 	.menu-scroll-down:focus {
-		outline: thin dotted;
+		outline: none;
 	}
 
 	.menu-scroll-down .icon {

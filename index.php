@@ -40,6 +40,7 @@ wp_enqueue_script('dotdotdot', get_theme_file_uri('/assets/js/jquery.dotdotdot.m
                         'depth' => 1,
                         'posts_per_page' => -1
                     ]);
+                    echo '<div id="size-scr">';
                     while ($query->have_posts()) : $query->the_post();
 
                         /*
@@ -67,6 +68,7 @@ wp_enqueue_script('dotdotdot', get_theme_file_uri('/assets/js/jquery.dotdotdot.m
 
 //                        }
                     endwhile;
+                    echo '</div>';
                 endif;
 
                 ?>

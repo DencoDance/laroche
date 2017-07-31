@@ -1,10 +1,20 @@
 #mobile-header {
     position: relative;
-    display: none;
+    height: 650px;
+}
+
+#mobile-header:before{
+    content: "";
+    opacity: 0.6;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
 }
 
 #mobile-header img {
-    height: 100vh;
+    height: 650px;
     object-fit: cover;
 }
 
@@ -12,15 +22,15 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 150px;
-    margin-bottom: 290px;
+    margin-bottom: 150px;
+    transition: opacity .5s cubic-bezier(.694,0,.335,1);
 }
 
 #solutions h2 {
     max-width: 287px;
     color: #292929;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 30px;
-    font-weight: bold;
     line-height: 37px;
     text-align: center;
     margin: 0 auto;
@@ -39,21 +49,34 @@
     margin: 0 auto;
 }
 
+#link-see {
+    text-decoration: none;
+}
+
 #see-work {
-    margin-bottom: 111px;
+    width: 167px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 #see-work p {
     color: #000000;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 20px;
-    font-weight: bold;
     line-height: 24px;
     text-align: center;
     margin: 0 auto;
+    width: 167px;
+}
+
+#see-work:hover #red-line {
+    transition: 0.5s ease;
+    opacity: 0;
 }
 
 #red-line {
+    transition: 0.5s ease;
     height: 2px;
     width: 163px;
     background-color: #FF4747;
@@ -81,14 +104,13 @@
 
 #result-block h2 {
     color: #000000;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 24px;
-    font-weight: bold;
     line-height: 32px;
 }
 
 #result-block p {
-    max-width: 470px;
+    width: 470px;
     opacity: 0.6;
     color: #000000;
     font-family: "Century Gothic";
@@ -98,20 +120,19 @@
 
 #result-block a {
     color: #FE3939;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 16px;
-    font-weight: bold;
     line-height: 20px;
+    text-decoration: none;
 }
 
 #partner-images h2 {
     color: #292929;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 24px;
-    font-weight: bold;
     line-height: 32px;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 85px;
 }
 
 .partner-logo {
@@ -152,9 +173,8 @@
 
 #article-left h2 {
     color: #000000;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 24px;
-    font-weight: bold;
     line-height: 29px;
 }
 
@@ -177,13 +197,15 @@
     bottom: 0;
     left: 0;
     right: 0;
+    margin-bottom: 0px !important;
 }
 
 .arrow {
     position: absolute;
+    transition: 0.2s ease;
     top: 0;
     bottom: 0;
-    right: 0;
+    right: 3px;
     margin: auto;
 }
 
@@ -194,7 +216,12 @@
 }
 
 #article-right {
-    margin-top: 72px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#article-right a {
+    text-decoration: none;
 }
 
 #mobile-hr {
@@ -219,16 +246,15 @@ hr {
 #home-hero {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 121px;
     left: 0;
     right: 0;
     margin: auto;
     max-width: 746.57px;
     max-height: 88px;
     color: #FFFFFF;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 36px;
-    font-weight: bold;
     line-height: 44px;
     text-align: center;
 }
@@ -243,11 +269,15 @@ hr {
     margin-bottom: 0px !important;
 }
 
+.type-post:hover .arrow {
+    transition: 0.5s ease;
+    right: 0px;
+}
+
 #home-contact h2 {
     color: #1C1C1C;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 24px;
-    font-weight: bold;
     line-height: 29px;
     text-align: center;
     margin-bottom: 0px;
@@ -256,25 +286,42 @@ hr {
 #home-contact p {
     color: #1C1C1C;
     font-family: "Century Gothic";
-    font-size: 24px;
+    font-size: 18px;
     line-height: 31px;
     text-align: center;
 }
 
+/*.portfolio-post-cat {*/
+    /*color: black !important;*/
+    /*font-size: 18px !important;*/
+    /*line-height: 30px !important;*/
+    /*text-align: center !important;*/
+    /*opacity: 0.5;*/
+/*}*/
+
+#partner-images {
+    margin-bottom: 150px;
+}
+
 #home-contact a {
+    transition: 0.3s ease;
     display: block;
     height: 55px;
     width: 250px;
     background-color: #FE3939;
     margin: 0 auto;
     color: #FFFFFF;
-    font-family: "Century Gothic";
+    font-family: "Century Gothic-Bold";
     font-size: 18px;
-    font-weight: bold;
     line-height: 22px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 17px;
     text-decoration: none;
+}
+
+#home-contact a:hover {
+    transition: 0.3s ease;
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px){
@@ -295,6 +342,12 @@ hr {
 
     #partner-images h2 {
         margin-bottom: 70px;
+    }
+
+    #partner-images {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 80px;
     }
 
     #solutions {
@@ -352,7 +405,7 @@ hr {
     }
 
     .row-partner-left {
-        margin-right: 40px;
+        margin-right: 36px;
     }
 
     .partner-logo {
@@ -384,11 +437,6 @@ hr {
         max-width: 97%;
         position: relative;
     }
-
-    #colophon {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 899px) {
@@ -396,10 +444,26 @@ hr {
         position: relative;
         display: block;
     }
+    #mobile-header:before{
+        content: "";
+        opacity: 0.6;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
 
     #home-hero {
-        font-size: 18px;
+        font-size: 24px;
+        padding: 15px;
         line-height: normal;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #result-block p {
+        width: 100%;
     }
 }
 
@@ -409,6 +473,12 @@ hr {
         display: block;
         margin-top: 0px;
         width: 280px;
+    }
+}
+
+@media screen and (max-width: 348px){
+    .row-partner-left {
+        margin-right: 10px;
     }
 }
 

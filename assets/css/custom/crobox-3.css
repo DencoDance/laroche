@@ -166,3 +166,50 @@
   font-size: 24px;
   line-height: 31px;
 }
+
+@media (max-width: 1024px){
+  .case-study-container{
+    width: 100%
+  }
+  .case-study-about-container{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-about-responsive-blocks{
+    width: 100% !important;
+    float: none !important;
+  }
+  .case-study-about-list li{
+    border-bottom: none;
+  }
+  .case-study-counters .lvca-odometers .lvca-odometer .lvca-suffix{
+    margin-bottom: 24px;
+    display: inline-block;
+    font-size: 35px;
+  }
+  .case-study-counters .lvca-odometers .lvca-odometer .lvca-number span{
+    font-size: 50px;
+  }
+  .case-study-counters .lvca-odometers .lvca-odometer .lvca-number {
+    font-size: 50px;
+  }
+  .case-study-counters .lvca-odometers .lvca-odometer .lvca-stats-title{
+    font-size: 18px;
+  }
+  .case-study-counters .lvca-odometers .lvca-odometer .lvca-stats-title{
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px){
+  .case-study-about-list li{
+    border: none;
+    float: none;
+    width: 100%;
+  }
+  .case-study-about-container{
+    padding: 50px 0;
+  }
+}

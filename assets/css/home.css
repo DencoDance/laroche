@@ -102,6 +102,7 @@
     font-size: 16px;
     font-weight: bold;
     line-height: 20px;
+    text-decoration: none;
 }
 
 #partner-images h2 {
@@ -195,6 +196,10 @@
 
 #article-right {
     margin-top: 72px;
+}
+
+#article-right a {
+    text-decoration: none;
 }
 
 #mobile-hr {

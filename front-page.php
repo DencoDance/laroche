@@ -30,10 +30,15 @@ get_header();
                 We help companies create effective strategies,powerful identities, seamless interactions, andmemorable experiences to connect your brand ororganization to the people who need you the very most.
             </p>
         </div>
-        <div id="see-work">
-            <p>See All Our Work</p>
-            <div id="red-line"></div>
+        <div id="portfolio" style="display: block; width: 70%; margin: 0 auto">
+            <?php do_shortcode('[portfolio_posts limit=4]');?>
         </div>
+        <a id="link-see" href="/portfolio/">
+            <div id="see-work">
+                <p>See All Our Work</p>
+                <div id="red-line"></div>
+            </div>
+        </a>
 
         <div id="result-block">
             <div class="container">
@@ -107,8 +112,12 @@ get_header();
                                 'depth'          => 1,
                                 'posts_per_page' => 3
                             ] );
+                        $i = 0;
                             while ( $query->have_posts() ) : $query->the_post();
-                                get_template_part( 'template-parts/page/content', 'front-page' );
+                                $i++;
+                                echo '<div class="opac-'.$i.'">';
+                                get_template_part( 'template-parts/page/content', 'front-page', $i );
+                                echo '</div>';
                                 echo '<hr>';
                             endwhile;
                         else : // I'm not sure it's possible to have no posts when this page is shown, but WTH.
@@ -146,5 +155,35 @@ get_header();
 
 	</main>
 </div>
+<script>
+    $(function () {
+        $('.opac-1').mouseenter(function () {
+            $('.opac-2').fadeTo(200, 0.5);
+            $('.opac-3').fadeTo(200, 0.5);
+        });
+        $('.opac-1').mouseleave(function () {
+            $('.opac-2').fadeTo(200, 1);
+            $('.opac-3').fadeTo(200, 1);
+        });
+
+        $('.opac-2').mouseenter(function () {
+            $('.opac-1').fadeTo(200, 0.5);
+            $('.opac-3').fadeTo(200, 0.5);
+        });
+        $('.opac-2').mouseleave(function () {
+            $('.opac-1').fadeTo(200, 1);
+            $('.opac-3').fadeTo(200, 1);
+        });
+
+        $('.opac-3').mouseenter(function () {
+            $('.opac-2').fadeTo(200, 0.5);
+            $('.opac-1').fadeTo(200, 0.5);
+        });
+        $('.opac-3').mouseleave(function () {
+            $('.opac-2').fadeTo(200, 1);
+            $('.opac-1').fadeTo(200, 1);
+        });
+    });        
+</script>
 
 <?php get_footer();

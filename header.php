@@ -37,9 +37,27 @@
         background: none;
         border: none;
     }
+    ul#top-menu li a:hover {
+        text-decoration: underline;
+    }
+    ul#top-menu li:last-child:hover ul#top-menu li a {
+        text-decoration: none;
+    }
     body.light .navigation-top:not(.active) ul#top-menu li:last-child{
         border-color: rgba(0, 0, 0, 0.5);
     }
+
+
+    ul#top-menu li:last-child:hover {
+        background-color: #FF4747;
+        border-color: #FF4747 !important;
+        color: white !important;
+    }
+    ul#top-menu li:last-child:hover a{
+        color: white !important;
+        text-decoration: none;
+    }
+
     body.light .navigation-top:not(.active) ul#top-menu li a{
         color: #000;
     }
@@ -51,6 +69,7 @@
     }
     .navigation-top ul#top-menu{
         text-align: center;
+        padding-top: 10px;
     }
     .navigation-top div.wrap{
         width: 100%;
@@ -61,7 +80,7 @@
         color: #fff;
         transition: all 0.3s ease-in-out;
         font-family: "Century Gothic";
-        font-size: 18px;
+        font-size: 16px;
         line-height: 22px;
         font-weight: bold;
     }
@@ -154,6 +173,11 @@
     .navigation-top #site-navigation.toggled-on .logo svg path, .navigation-top #site-navigation.toggled-on .logo svg polygon{
         fill: white;
     }
+    @media (max-width: 991px) {
+        .navigation-top .logo {
+            margin-left: 5px;
+        }
+    }
     @media (max-width: 600px) {
         .navigation-top.active{
             top: 0;
@@ -161,7 +185,7 @@
     }
     @media (max-width: 62em){
         .navigation-top .logo{
-            padding: 25px 15px 0 15px;
+            padding: 15px 15px 0 15px;
         }
         .navigation-top .ham{
             margin-right: 15px;
