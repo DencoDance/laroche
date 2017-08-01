@@ -63,11 +63,14 @@
   width: 40%;
   float: left;
   padding: 25px 0 25px 0;
-  border: 1px solid #b3b3b3;
+  border-top: 1px solid #b3b3b3;
   border-left: 0;
   border-right: 0;
   border-collapse: collapse;
   margin: 0px 40px -1px 10px;
+}
+.case-study-about-list li:last-child, .case-study-about-list li:nth-last-child(2) {
+  border-bottom: 1px solid #b3b3b3;
 }
 .case-study-image-divider{
   width: 100%;
@@ -86,7 +89,7 @@
   line-height: 45px;
   text-align: center;
   max-width: 750px;
-  margin:0 auto;
+  margin: 100px auto 110px auto;
 }
 .case-study-quote .case-study-quote-author{
   font-size: 20px;
@@ -95,12 +98,15 @@
 }
 .case-study-counters{
   width: 90%;
-  margin:10px auto 80px auto;
+  margin:10px auto 100px auto;
   text-align: center;
 }
 .case-study-counters .lvca-odometer{
   text-align:center;
   font-family: "Century Gothic";
+}
+.lvca-odometers .lvca-odometer{
+  margin-bottom: 10px;
 }
 .case-study-counters .lvca-odometers .lvca-odometer .lvca-number span{
   font-size: 150px;
@@ -126,20 +132,20 @@
 }
 .case-study-counters .lvca-odometers .lvca-odometer .lvca-stats-title{
   color: #292929;
-  font-family: "Century Gothic";
-  font-size: 24px;
-  font-weight: bold;
+  font-family: "Century Gothic-Bold";
+  font-size: 21px;
   letter-spacing: 2px;
   line-height: 29px;
+  margin-top: 25px;
 }
 .case-study-counter-main-title{
   color: #AAAAAA;
-  font-family: "Century Gothic";
+  font-family: "Century Gothic-Bold";
   font-size: 18px;
-  font-weight: bold;
   letter-spacing: 1px;
   line-height: 40px;
   text-align: center;
+  margin-top: 100px;
 }
 .case-study-work-with-us-btn a{
   background:#FE3939 !important;
@@ -203,9 +209,9 @@
   }
 }
 
-@media (max-width: 425px){
+@media (max-width: 659px){
   .case-study-about-list li{
-    border: none;
+    border: none !important;
     float: none;
     width: 100%;
   }

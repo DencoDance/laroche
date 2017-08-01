@@ -58,10 +58,13 @@ wp_enqueue_script('dotdotdot', get_theme_file_uri('/assets/js/jquery.dotdotdot.m
                             get_template_part('template-parts/post-blog/post-content', get_post_format());
                             echo '</div>';
                             if ($i % 6 == 0) {
-                                echo '<div class="clearfix"></div><div id="hide-mobile"><hr><div id="article-laptop-send">' . do_shortcode("[mc4wp_form id=\"162\"]") . '</div><hr></div>';
+                                echo '<div class="clearfix article-tablet-fix"></div><div id="hide-mobile"><hr><div id="article-laptop-send">' . do_shortcode("[mc4wp_form id=\"162\"]") . '</div><hr></div>';
+                            }
+                            if ($i % 4 == 0) {
+                                echo '<div class="clearfix article-other-fix"></div><div id="hide-tablet"><hr><div id="article-tablet-send">' . do_shortcode("[mc4wp_form id=\"162\"]") . '</div><hr></div>';
                             }
                             if ($i % 3 == 0) {
-                                echo '<div class="clearfix"></div><div id="hide-laptop"><hr><div id="article-mobile-send">' . do_shortcode("[mc4wp_form id=\"162\"]") . '</div><hr></div>';
+                                echo '<div class="clearfix article-tablet-fix"></div><div id="hide-laptop"><hr><div id="article-mobile-send">' . do_shortcode("[mc4wp_form id=\"162\"]") . '</div><hr></div>';
                             }
                             $i++;
                             $a++;

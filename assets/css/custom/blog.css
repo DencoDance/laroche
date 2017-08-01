@@ -190,8 +190,15 @@
     padding: 0;
     max-width: 180px;
 }
+.article-other-fix{
+    display: none;
+}
 
 #hide-laptop {
+    display: none;
+}
+
+#hide-tablet{
     display: none;
 }
 
@@ -273,8 +280,20 @@
         display: none;
     }
 
-    #hide-laptop {
+    #hide-tablet{
         display: block;
+    }
+
+    #hide-laptop {
+        display: none;
+    }
+
+    .article-other-fix{
+        display: block;
+    }
+
+    .article-tablet-fix{
+        display: none;
     }
 
     .mc4wp-form-fields {
@@ -414,5 +433,18 @@
         float: none !important;
         width: 100% !important;
         height: 100%;
+    }
+    #hide-tablet{
+        display: none;
+    }
+
+    #hide-laptop {
+        display: block;
+    }
+    .article-tablet-fix{
+        display: block;
+    }
+    .article-other-fix{
+        display: none;
     }
 }

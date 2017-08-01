@@ -82,7 +82,7 @@
         font-family: "Century Gothic";
         font-size: 16px;
         line-height: 22px;
-        font-weight: bold;
+        padding: 1em 25px;
     }
     .navigation-top ul#top-menu li a.active{
         color: #000;
